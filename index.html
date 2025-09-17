@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casita Inteligente - EETP N° 468</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="top-bar">
+        <img class="logo" src="logo.jpeg" alt="logo" width="40px";>
+        <div>EETP N° 468 - Ing. Luis B. Laporte</div>
+    </header>
+
+    <div class="container">
+        <div class="house-container">
+  <img src="casa.png" alt="Casa" class="house-image">
+
+  <!-- Planta Baja -->
+  <div class="room" data-id="1" style="top:69%; left:32.5%;">
+    <span class="room-number">1</span>
+  </div>
+  <div class="room" data-id="2" style="top:69%; left:59%;">
+    <span class="room-number">2</span>
+  </div>
+
+  <!-- Primer Piso -->
+  <div class="room" data-id="3" style="top:55%; left:32.5%;">
+    <span class="room-number">3</span>
+  </div>
+  <div class="room" data-id="4" style="top:55%; left:59%;">
+    <span class="room-number">4</span>
+  </div>
+
+  <!-- Segundo Piso -->
+  <div class="room" data-id="5" style="top:41%; left:32.5%;">
+    <span class="room-number">5</span>
+  </div>
+  <div class="room" data-id="6" style="top:41%; left:59%;">
+    <span class="room-number">6</span>
+  </div>
+</div>
+
+        
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+        </div>
+        <div class="controls">
+            <button id="toggleAllLights" class="control-button">Prender/Apagar Todas las Luces</button>
+        </div>
+				
+        <div class="status-bar">
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color off"></div>
+                    <span>Apagado</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color on"></div>
+                    <span>Encendido</span>
+                </div>
+            </div>
+            <div class="last-update" id="lastUpdate">
+                Última actualización: --:--
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
