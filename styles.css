@@ -5,23 +5,31 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #91929e, #5e5e74);
-  min-height: 100vh;
-  color: #929292;
-  overflow-x: hidden;
-  backdrop-filter: blur(7px);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #2e2e2e; /* Fondo gris oscuro */
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  background-image: radial-gradient(
+    circle, 
+    #444 10%,               /* Color del punto */
+    rgb(0, 0, 0) 11%, /* Sombra oscura alrededor */
+    transparent 12%
+  );
+  
+  background-size: 40px 40px; /* Espaciado entre puntos */
 }
 
 .container, .floor, header {
-  background: rgba(73, 73, 73, 0.95);
+  background: rgba(48, 48, 63, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .container {
   max-width: 600px;
-  height: 100%;
+  height: 104%;
   margin: auto;
   padding: 10px;
   min-height: 100vh;
@@ -83,7 +91,6 @@ header h2 {
 .rooms-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
 }
 
 .room {
@@ -129,7 +136,6 @@ header h2 {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 8px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .status-indicator {
@@ -175,7 +181,7 @@ header h2 {
 @keyframes spin { to { transform: rotate(360deg);} }
 
 .status-bar {
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(36, 36, 36);
   border-radius: 12px;
   padding: 11px;
   display: flex;
@@ -291,8 +297,9 @@ header h2 {
 
 .room {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: auto;
+  max-height: 50px;
+  min-height: 10%;
   border-radius: 50%;
   background: rgba(255,255,255,0.9);
   border: 2px solid #333;
